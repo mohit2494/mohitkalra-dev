@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mohit Kalra</title>
+<meta name="description" content="Software engineer working on privacy-aware AI infrastructure. Writing about system design, engineering tradeoffs, and what I'm figuring out along the way.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;1,400&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0;}
+:root{--bg:#faf9f7;--t1:#141210;--t2:#7a7672;--t3:#b8b4af;--accent:#2c5f3f;--border:rgba(0,0,0,0.07);--serif:'Lora',serif;--mono:'DM Mono',monospace;}
+body.dark{--bg:#111110;--t1:#edeae5;--t2:#6a6763;--t3:#3a3835;--accent:#5aab78;--border:rgba(255,255,255,0.06);}
+body{background:var(--bg);color:var(--t1);font-family:var(--mono);font-size:13px;line-height:1.7;transition:background .2s,color .2s;}
+.w{max-width:560px;margin:0 auto;padding:0 28px;}
+header{display:flex;justify-content:space-between;align-items:center;padding:32px 0 0;}
+.logo{font-size:12px;color:var(--t2);letter-spacing:0.02em;}
+.tog{background:none;border:none;cursor:pointer;font-family:var(--mono);font-size:11px;color:var(--t3);padding:0;transition:color .15s;}
+.tog:hover{color:var(--t1);}
+.hero{padding:80px 0 64px;}
+.hero-name{font-family:var(--serif);font-size:28px;font-weight:400;line-height:1.25;margin-bottom:20px;letter-spacing:-0.01em;}
+.hero-name em{font-style:italic;color:var(--accent);}
+.hero-bio{font-size:13px;color:var(--t2);max-width:440px;line-height:1.8;margin-bottom:32px;}
+.links{display:flex;gap:20px;flex-wrap:wrap;}
+.link{font-size:12px;color:var(--t2);text-decoration:none;border-bottom:1px solid var(--border);padding-bottom:1px;transition:color .15s,border-color .15s;}
+.link:hover{color:var(--accent);border-color:var(--accent);}
+.divider{border:none;border-top:0.5px solid var(--border);}
+section{padding:48px 0;}
+.s-label{font-size:10px;letter-spacing:0.1em;text-transform:uppercase;color:var(--t3);margin-bottom:28px;}
+.post-row{display:flex;justify-content:space-between;align-items:baseline;gap:16px;padding:13px 0;border-bottom:0.5px solid var(--border);text-decoration:none;cursor:pointer;}
+.post-row:first-of-type{border-top:0.5px solid var(--border);}
+.post-title{font-size:13px;color:var(--t1);transition:color .15s;line-height:1.5;}
+.post-row:hover .post-title{color:var(--accent);}
+.post-tag{font-size:10px;color:var(--t3);white-space:nowrap;flex-shrink:0;}
+.exp-row{display:grid;grid-template-columns:90px 1fr;gap:12px;padding:12px 0;border-bottom:0.5px solid var(--border);}
+.exp-row:first-of-type{border-top:0.5px solid var(--border);}
+.exp-yr{font-size:11px;color:var(--t3);padding-top:1px;}
+.exp-co{font-size:13px;color:var(--t1);}
+.exp-role{font-size:11px;color:var(--t2);margin-top:2px;}
+.contact-row{display:flex;justify-content:space-between;align-items:center;padding:11px 0;border-bottom:0.5px solid var(--border);}
+.contact-row:first-of-type{border-top:0.5px solid var(--border);}
+.c-label{font-size:11px;color:var(--t3);}
+.c-val{font-size:12px;color:var(--accent);text-decoration:none;}
+.c-val:hover{text-decoration:underline;}
+.c-text{font-size:12px;color:var(--t2);}
+footer{padding:32px 0;font-size:11px;color:var(--t3);}
+@media(max-width:480px){.hero-name{font-size:22px;}.exp-row{grid-template-columns:1fr;}.post-row{flex-direction:column;gap:4px;}}
+</style>
+</head>
+<body>
+<div class="w">
+  <header>
+    <span class="logo">mohit kalra</span>
+    <button class="tog" onclick="document.body.classList.toggle('dark')">light / dark</button>
+  </header>
+
+  <div class="hero">
+    <h1 class="hero-name">Building AI systems.<br><em>Learning out loud.</em></h1>
+    <p class="hero-bio">Software engineer working on privacy-aware infrastructure for large-scale AI. Writing about system design, engineering tradeoffs, and what I'm figuring out along the way.</p>
+    <div class="links">
+      <a class="link" href="mailto:mohit2494@gmail.com">email</a>
+      <a class="link" href="https://linkedin.com/in/mk2494" target="_blank">linkedin</a>
+      <a class="link" href="https://github.com/mohit2494" target="_blank">github</a>
+    </div>
+  </div>
+
+  <hr class="divider">
+
+  <section>
+    <div class="s-label">writing</div>
+    <a class="post-row" href="#"><span class="post-title">Discord migrated trillions of messages in 9 days. Here's what actually fixed it.</span><span class="post-tag">system design</span></a>
+    <a class="post-row" href="#"><span class="post-title">The bottleneck didn't go away. It moved.</span><span class="post-tag">ai</span></a>
+    <a class="post-row" href="#"><span class="post-title">Knowing what not to build is the hard part.</span><span class="post-tag">engineering</span></a>
+    <a class="post-row" href="#"><span class="post-title">Rate limiting: four approaches and when each one breaks.</span><span class="post-tag">system design</span></a>
+  </section>
+
+  <hr class="divider">
+
+  <section>
+    <div class="s-label">work</div>
+    <div class="exp-row"><div class="exp-yr">2024 — now</div><div><div class="exp-co">Meta Platforms</div><div class="exp-role">Software Engineer · Privacy-Aware AI Infrastructure · MSL</div></div></div>
+    <div class="exp-row"><div class="exp-yr">2023 — 2024</div><div><div class="exp-co">Oracle Cloud</div><div class="exp-role">Senior Member of Technical Staff · Deployment orchestration</div></div></div>
+    <div class="exp-row"><div class="exp-yr">2021 — 2023</div><div><div class="exp-co">Warner Bros. Discovery</div><div class="exp-role">Software Engineer · ML Personalization · 100M+ users</div></div></div>
+    <div class="exp-row"><div class="exp-yr">2019 — 2021</div><div><div class="exp-co">University of Florida</div><div class="exp-role">MS Computer Science · 3.89 GPA</div></div></div>
+    <div class="exp-row"><div class="exp-yr">2016 — 2019</div><div><div class="exp-co">Deloitte · Stratbeans</div><div class="exp-role">Software Engineer · Risk analytics · AI chatbots</div></div></div>
+  </section>
+
+  <hr class="divider">
+
+  <section>
+    <div class="s-label">contact</div>
+    <div class="contact-row"><span class="c-label">email</span><a class="c-val" href="mailto:mohit2494@gmail.com">mohit2494@gmail.com</a></div>
+    <div class="contact-row"><span class="c-label">linkedin</span><a class="c-val" href="https://linkedin.com/in/mk2494" target="_blank">linkedin.com/in/mk2494</a></div>
+    <div class="contact-row"><span class="c-label">github</span><a class="c-val" href="https://github.com/mohit2494" target="_blank">github.com/mohit2494</a></div>
+    <div class="contact-row"><span class="c-label">location</span><span class="c-text">Bellevue, WA</span></div>
+  </section>
+
+  <footer>© 2026 mohit kalra</footer>
+</div>
+</body>
+</html>
