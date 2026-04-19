@@ -3,40 +3,78 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Mohit Kalra</title>
-<meta name="description" content="Software engineer working on privacy-aware AI infrastructure. Writing about system design, engineering tradeoffs, and what I'm figuring out along the way.">
+<title>Mohit Kalra — Software Engineer</title>
+<meta name="description" content="Software engineer building privacy-aware AI infrastructure at scale. Writing about system design, engineering tradeoffs, and what I'm learning along the way.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;1,400&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
 *{box-sizing:border-box;margin:0;padding:0;}
-:root{--bg:#faf9f7;--t1:#141210;--t2:#7a7672;--t3:#b8b4af;--accent:#2c5f3f;--border:rgba(0,0,0,0.07);--serif:'Lora',serif;--mono:'DM Mono',monospace;}
-body.dark{--bg:#111110;--t1:#edeae5;--t2:#6a6763;--t3:#3a3835;--accent:#5aab78;--border:rgba(255,255,255,0.06);}
+:root{
+  --bg:#ffffff;
+  --t1:#0f0e0d;
+  --t2:#6b6864;
+  --t3:#b5b2ae;
+  --accent:#1e4d35;
+  --border:rgba(0,0,0,0.08);
+  --serif:'Lora',serif;
+  --mono:'DM Mono',monospace;
+}
+body.dark{
+  --bg:#0f0f0e;
+  --t1:#edebe7;
+  --t2:#686562;
+  --t3:#38362f;
+  --accent:#5aab78;
+  --border:rgba(255,255,255,0.07);
+}
 body{background:var(--bg);color:var(--t1);font-family:var(--mono);font-size:13px;line-height:1.7;transition:background .2s,color .2s;}
-.w{max-width:560px;margin:0 auto;padding:0 28px;}
-header{display:flex;justify-content:space-between;align-items:center;padding:32px 0 0;}
-.logo{font-size:12px;color:var(--t2);letter-spacing:0.02em;}
+.w{max-width:580px;margin:0 auto;padding:0 28px;}
+header{display:flex;justify-content:space-between;align-items:center;padding:36px 0 0;}
+.logo{font-size:12px;color:var(--t2);}
+nav{display:flex;gap:20px;align-items:center;}
+nav a{font-size:12px;color:var(--t2);text-decoration:none;transition:color .15s;}
+nav a:hover{color:var(--accent);}
 .tog{background:none;border:none;cursor:pointer;font-family:var(--mono);font-size:11px;color:var(--t3);padding:0;transition:color .15s;}
 .tog:hover{color:var(--t1);}
-.hero{padding:80px 0 64px;}
-.hero-name{font-family:var(--serif);font-size:28px;font-weight:400;line-height:1.25;margin-bottom:20px;letter-spacing:-0.01em;}
+.hero{padding:72px 0 56px;}
+.hero-name{font-family:var(--serif);font-size:30px;font-weight:400;line-height:1.25;margin-bottom:18px;letter-spacing:-0.01em;}
 .hero-name em{font-style:italic;color:var(--accent);}
-.hero-bio{font-size:13px;color:var(--t2);max-width:440px;line-height:1.8;margin-bottom:32px;}
-.links{display:flex;gap:20px;flex-wrap:wrap;}
-.link{font-size:12px;color:var(--t2);text-decoration:none;border-bottom:1px solid var(--border);padding-bottom:1px;transition:color .15s,border-color .15s;}
-.link:hover{color:var(--accent);border-color:var(--accent);}
-.divider{border:none;border-top:0.5px solid var(--border);}
-section{padding:48px 0;}
-.s-label{font-size:10px;letter-spacing:0.1em;text-transform:uppercase;color:var(--t3);margin-bottom:28px;}
-.post-row{display:flex;justify-content:space-between;align-items:baseline;gap:16px;padding:13px 0;border-bottom:0.5px solid var(--border);text-decoration:none;cursor:pointer;}
+.hero-bio{font-size:13px;color:var(--t2);max-width:460px;line-height:1.85;margin-bottom:28px;}
+.hero-links{display:flex;gap:20px;flex-wrap:wrap;}
+.hl{font-size:12px;color:var(--t2);text-decoration:none;border-bottom:1px solid var(--border);padding-bottom:1px;transition:color .15s,border-color .15s;}
+.hl:hover{color:var(--accent);border-color:var(--accent);}
+hr{border:none;border-top:0.5px solid var(--border);}
+section{padding:44px 0;}
+.sl{font-size:10px;letter-spacing:0.1em;text-transform:uppercase;color:var(--t3);margin-bottom:24px;}
+/* impact numbers */
+.impact-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border);border:0.5px solid var(--border);border-radius:8px;overflow:hidden;margin-bottom:8px;}
+.impact-cell{background:var(--bg);padding:20px 16px;}
+.impact-num{font-family:var(--serif);font-size:22px;color:var(--accent);margin-bottom:4px;}
+.impact-label{font-size:10px;color:var(--t3);line-height:1.5;}
+/* press */
+.press-row{display:flex;justify-content:space-between;align-items:baseline;gap:16px;padding:12px 0;border-bottom:0.5px solid var(--border);text-decoration:none;}
+.press-row:first-of-type{border-top:0.5px solid var(--border);}
+.press-title{font-size:12px;color:var(--t1);transition:color .15s;line-height:1.5;}
+.press-row:hover .press-title{color:var(--accent);}
+.press-pub{font-size:10px;color:var(--t3);white-space:nowrap;flex-shrink:0;}
+/* recognition */
+.rec-row{display:grid;grid-template-columns:140px 1fr;gap:12px;padding:11px 0;border-bottom:0.5px solid var(--border);}
+.rec-row:first-of-type{border-top:0.5px solid var(--border);}
+.rec-label{font-size:11px;color:var(--t3);}
+.rec-val{font-size:12px;color:var(--t1);}
+/* writing */
+.post-row{display:flex;justify-content:space-between;align-items:baseline;gap:16px;padding:12px 0;border-bottom:0.5px solid var(--border);text-decoration:none;}
 .post-row:first-of-type{border-top:0.5px solid var(--border);}
 .post-title{font-size:13px;color:var(--t1);transition:color .15s;line-height:1.5;}
 .post-row:hover .post-title{color:var(--accent);}
 .post-tag{font-size:10px;color:var(--t3);white-space:nowrap;flex-shrink:0;}
+/* work */
 .exp-row{display:grid;grid-template-columns:90px 1fr;gap:12px;padding:12px 0;border-bottom:0.5px solid var(--border);}
 .exp-row:first-of-type{border-top:0.5px solid var(--border);}
 .exp-yr{font-size:11px;color:var(--t3);padding-top:1px;}
 .exp-co{font-size:13px;color:var(--t1);}
 .exp-role{font-size:11px;color:var(--t2);margin-top:2px;}
+/* contact */
 .contact-row{display:flex;justify-content:space-between;align-items:center;padding:11px 0;border-bottom:0.5px solid var(--border);}
 .contact-row:first-of-type{border-top:0.5px solid var(--border);}
 .c-label{font-size:11px;color:var(--t3);}
@@ -44,58 +82,225 @@ section{padding:48px 0;}
 .c-val:hover{text-decoration:underline;}
 .c-text{font-size:12px;color:var(--t2);}
 footer{padding:32px 0;font-size:11px;color:var(--t3);}
-@media(max-width:480px){.hero-name{font-size:22px;}.exp-row{grid-template-columns:1fr;}.post-row{flex-direction:column;gap:4px;}}
+@media(max-width:480px){
+  .hero-name{font-size:24px;}
+  .impact-grid{grid-template-columns:1fr;}
+  .exp-row,.rec-row{grid-template-columns:1fr;}
+  .post-row{flex-direction:column;gap:3px;}
+  nav a:nth-child(2),nav a:nth-child(3){display:none;}
+}
 </style>
 </head>
 <body>
 <div class="w">
-  <header>
-    <span class="logo">mohit kalra</span>
-    <button class="tog" onclick="document.body.classList.toggle('dark')">light / dark</button>
-  </header>
 
-  <div class="hero">
-    <h1 class="hero-name">Building AI systems.<br><em>Learning out loud.</em></h1>
-    <p class="hero-bio">Software engineer working on privacy-aware infrastructure for large-scale AI. Writing about system design, engineering tradeoffs, and what I'm figuring out along the way.</p>
-    <div class="links">
-      <a class="link" href="mailto:mohit2494@gmail.com">email</a>
-      <a class="link" href="https://linkedin.com/in/mk2494" target="_blank">linkedin</a>
-      <a class="link" href="https://github.com/mohit2494" target="_blank">github</a>
+<header>
+  <span class="logo">mohit kalra</span>
+  <nav>
+    <a href="#press">press</a>
+    <a href="#writing">writing</a>
+    <a href="#work">work</a>
+    <a href="#contact">contact</a>
+    <button class="tog" onclick="document.body.classList.toggle('dark')">light / dark</button>
+  </nav>
+</header>
+
+<div class="hero">
+  <h1 class="hero-name">Building AI systems.<br><em>Learning out loud.</em></h1>
+  <p class="hero-bio">Software engineer working on privacy-aware infrastructure for large-scale AI at Meta Superintelligence Labs. Previously Warner Bros. Discovery, Oracle, AWS. Writing about system design, engineering tradeoffs, and what I'm figuring out along the way.</p>
+  <div class="hero-links">
+    <a class="hl" href="mailto:mohit2494@gmail.com">email</a>
+    <a class="hl" href="https://linkedin.com/in/mk2494" target="_blank">linkedin</a>
+    <a class="hl" href="https://github.com/mohit2494" target="_blank">github</a>
+  </div>
+</div>
+
+<hr>
+
+<section>
+  <div class="sl">impact at scale</div>
+  <div class="impact-grid">
+    <div class="impact-cell">
+      <div class="impact-num">1B+</div>
+      <div class="impact-label">users protected by privacy infra at Meta AI</div>
+    </div>
+    <div class="impact-cell">
+      <div class="impact-num">100M+</div>
+      <div class="impact-label">users served by ML personalization at WBD</div>
+    </div>
+    <div class="impact-cell">
+      <div class="impact-num">500M+</div>
+      <div class="impact-label">financial records processed at Deloitte</div>
+    </div>
+  </div>
+</section>
+
+<hr>
+
+<section id="press">
+  <div class="sl">press & media coverage</div>
+
+  <a class="press-row" href="https://ai.meta.com/blog/introducing-muse-spark-msl/" target="_blank">
+    <span class="press-title">Introducing Muse Spark: Scaling Towards Personal Superintelligence — infrastructure supporting MSL and Meta AI's 1B+ users</span>
+    <span class="press-pub">Meta AI · 2026</span>
+  </a>
+  <a class="press-row" href="https://techcrunch.com/2026/04/08/meta-debuts-the-muse-spark-model-in-a-ground-up-overhaul-of-its-ai/" target="_blank">
+    <span class="press-title">Meta debuts Muse Spark in a ground-up overhaul of its AI — the infra stack this runs on</span>
+    <span class="press-pub">TechCrunch · 2026</span>
+  </a>
+  <a class="press-row" href="https://variety.com/2023/digital/news/max-launches-top-10-most-watched-lists-shows-movies-1235709973/" target="_blank">
+    <span class="press-title">Max Launches Top 10 Trending Lists for TV Shows, Movies — ML system I built and led</span>
+    <span class="press-pub">Variety · 2023</span>
+  </a>
+  <a class="press-row" href="https://www.wbd.com/leadership/jb-perrette" target="_blank">
+    <span class="press-title">JB Perrette, CEO Global Streaming, cited Immersive Hero personalization project in investor press conference</span>
+    <span class="press-pub">Warner Bros. Discovery · 2023</span>
+  </a>
+  <a class="press-row" href="https://tinyurl.com/24wc7jhy" target="_blank">
+    <span class="press-title">AI-powered chatbot platform for 2M+ learners — featured coverage of Stratbeans work</span>
+    <span class="press-pub">Exchange4Media · 2019</span>
+  </a>
+</section>
+
+<hr>
+
+<section>
+  <div class="sl">recognition</div>
+
+  <div class="rec-row">
+    <div class="rec-label">NVIDIA AI/ML Developer Connect</div>
+    <div class="rec-val">Invited participant, 2018 & 2019 — exclusive AI/ML practitioner conference</div>
+  </div>
+  <div class="rec-row">
+    <div class="rec-label">CEO recognition</div>
+    <div class="rec-val">Immersive Hero project cited by JB Perrette, CEO & President Global Streaming, WBD</div>
+  </div>
+  <div class="rec-row">
+    <div class="rec-label">Guest Lecturer</div>
+    <div class="rec-val">University of Florida · CEN 3031 Introduction to Software Engineering</div>
+  </div>
+  <div class="rec-row">
+    <div class="rec-label">Technical Speaker</div>
+    <div class="rec-val">Elasticsearch Meetup, Gurgaon — "Kibana as a Reporting Engine" (Apr 2019)</div>
+  </div>
+  <div class="rec-row">
+    <div class="rec-label">Deloitte Spot Award</div>
+    <div class="rec-val">Exceptional value delivery · fraud detection ML systems · Fortune 500 clients</div>
+  </div>
+  <div class="rec-row">
+    <div class="rec-label">Deloitte Busy Season Awards</div>
+    <div class="rec-val">2× consecutive recognition for high-stakes data security and compliance delivery</div>
+  </div>
+  <div class="rec-row">
+    <div class="rec-label">Stratbeans Spot Bonus</div>
+    <div class="rec-val">2× awards for AI solutions improving client outcomes by 40%</div>
+  </div>
+  <div class="rec-row">
+    <div class="rec-label">Code Obfuscation Competition</div>
+    <div class="rec-val">1st place among 100+ participants — multi-threaded C++ application in 60 min</div>
+  </div>
+</section>
+
+<hr>
+
+<section id="writing">
+  <div class="sl">writing</div>
+  <a class="post-row" href="#">
+    <span class="post-title">Discord migrated trillions of messages in 9 days. Here's what actually fixed it.</span>
+    <span class="post-tag">system design</span>
+  </a>
+  <a class="post-row" href="#">
+    <span class="post-title">The bottleneck didn't go away. It moved.</span>
+    <span class="post-tag">ai + engineering</span>
+  </a>
+  <a class="post-row" href="#">
+    <span class="post-title">Knowing what not to build is the hard part.</span>
+    <span class="post-tag">engineering</span>
+  </a>
+  <a class="post-row" href="#">
+    <span class="post-title">Rate limiting: four approaches and when each one breaks.</span>
+    <span class="post-tag">system design</span>
+  </a>
+</section>
+
+<hr>
+
+<section id="work">
+  <div class="sl">work</div>
+  <div class="exp-row">
+    <div class="exp-yr">2024 — now</div>
+    <div>
+      <div class="exp-co">Meta Platforms</div>
+      <div class="exp-role">Software Engineer · Privacy-Aware AI Infrastructure · Meta Superintelligence Labs</div>
+    </div>
+  </div>
+  <div class="exp-row">
+    <div class="exp-yr">2023 — 2024</div>
+    <div>
+      <div class="exp-co">Oracle Cloud</div>
+      <div class="exp-role">Senior Member of Technical Staff · Deployment orchestration</div>
+    </div>
+  </div>
+  <div class="exp-row">
+    <div class="exp-yr">2021 — 2023</div>
+    <div>
+      <div class="exp-co">Warner Bros. Discovery</div>
+      <div class="exp-role">Software Engineer · ML Personalization · 100M+ users · 60K RPS</div>
+    </div>
+  </div>
+  <div class="exp-row">
+    <div class="exp-yr">2020</div>
+    <div>
+      <div class="exp-co">Amazon Web Services</div>
+      <div class="exp-role">SDE Intern · Distributed search · Elasticsearch · shipped to production</div>
+    </div>
+  </div>
+  <div class="exp-row">
+    <div class="exp-yr">2018 — 2019</div>
+    <div>
+      <div class="exp-co">Stratbeans Consulting</div>
+      <div class="exp-role">Senior Software Engineer · AI chatbots · 2M+ users · Google Dialogflow, IBM Watson</div>
+    </div>
+  </div>
+  <div class="exp-row">
+    <div class="exp-yr">2016 — 2018</div>
+    <div>
+      <div class="exp-co">Deloitte</div>
+      <div class="exp-role">Software Engineer · Risk Analytics · Fraud detection · Fortune 500 clients</div>
     </div>
   </div>
 
-  <hr class="divider">
+  <div style="margin-top:28px;">
+    <div class="sl" style="margin-bottom:16px;">education</div>
+    <div class="exp-row">
+      <div class="exp-yr">2019 — 2021</div>
+      <div>
+        <div class="exp-co">University of Florida</div>
+        <div class="exp-role">MS Computer Science · GPA 3.89 / 4.0 · Gainesville, FL</div>
+      </div>
+    </div>
+    <div class="exp-row">
+      <div class="exp-yr">2012 — 2016</div>
+      <div>
+        <div class="exp-co">Northcap University</div>
+        <div class="exp-role">BTech Computer Science · 9.1 / 10 · Gurugram, India</div>
+      </div>
+    </div>
+  </div>
+</section>
 
-  <section>
-    <div class="s-label">writing</div>
-    <a class="post-row" href="#"><span class="post-title">Discord migrated trillions of messages in 9 days. Here's what actually fixed it.</span><span class="post-tag">system design</span></a>
-    <a class="post-row" href="#"><span class="post-title">The bottleneck didn't go away. It moved.</span><span class="post-tag">ai</span></a>
-    <a class="post-row" href="#"><span class="post-title">Knowing what not to build is the hard part.</span><span class="post-tag">engineering</span></a>
-    <a class="post-row" href="#"><span class="post-title">Rate limiting: four approaches and when each one breaks.</span><span class="post-tag">system design</span></a>
-  </section>
+<hr>
 
-  <hr class="divider">
+<section id="contact">
+  <div class="sl">contact</div>
+  <div class="contact-row"><span class="c-label">email</span><a class="c-val" href="mailto:mohit2494@gmail.com">mohit2494@gmail.com</a></div>
+  <div class="contact-row"><span class="c-label">linkedin</span><a class="c-val" href="https://linkedin.com/in/mk2494" target="_blank">linkedin.com/in/mk2494</a></div>
+  <div class="contact-row"><span class="c-label">github</span><a class="c-val" href="https://github.com/mohit2494" target="_blank">github.com/mohit2494</a></div>
+  <div class="contact-row"><span class="c-label">location</span><span class="c-text">Bellevue, WA</span></div>
+</section>
 
-  <section>
-    <div class="s-label">work</div>
-    <div class="exp-row"><div class="exp-yr">2024 — now</div><div><div class="exp-co">Meta Platforms</div><div class="exp-role">Software Engineer · Privacy-Aware AI Infrastructure · MSL</div></div></div>
-    <div class="exp-row"><div class="exp-yr">2023 — 2024</div><div><div class="exp-co">Oracle Cloud</div><div class="exp-role">Senior Member of Technical Staff · Deployment orchestration</div></div></div>
-    <div class="exp-row"><div class="exp-yr">2021 — 2023</div><div><div class="exp-co">Warner Bros. Discovery</div><div class="exp-role">Software Engineer · ML Personalization · 100M+ users</div></div></div>
-    <div class="exp-row"><div class="exp-yr">2019 — 2021</div><div><div class="exp-co">University of Florida</div><div class="exp-role">MS Computer Science · 3.89 GPA</div></div></div>
-    <div class="exp-row"><div class="exp-yr">2016 — 2019</div><div><div class="exp-co">Deloitte · Stratbeans</div><div class="exp-role">Software Engineer · Risk analytics · AI chatbots</div></div></div>
-  </section>
+<footer>© 2026 mohit kalra · mohitkalra-dev.vercel.app</footer>
 
-  <hr class="divider">
-
-  <section>
-    <div class="s-label">contact</div>
-    <div class="contact-row"><span class="c-label">email</span><a class="c-val" href="mailto:mohit2494@gmail.com">mohit2494@gmail.com</a></div>
-    <div class="contact-row"><span class="c-label">linkedin</span><a class="c-val" href="https://linkedin.com/in/mk2494" target="_blank">linkedin.com/in/mk2494</a></div>
-    <div class="contact-row"><span class="c-label">github</span><a class="c-val" href="https://github.com/mohit2494" target="_blank">github.com/mohit2494</a></div>
-    <div class="contact-row"><span class="c-label">location</span><span class="c-text">Bellevue, WA</span></div>
-  </section>
-
-  <footer>© 2026 mohit kalra</footer>
 </div>
 </body>
 </html>
